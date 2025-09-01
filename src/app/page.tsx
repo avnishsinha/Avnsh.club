@@ -31,12 +31,7 @@ const portraits = [
   { src: "/img/IMG_4256-2.jpg", title: "Portrait 18", ratio: "aspect-[3/4]", tag: "Portrait" },
 ];
 
-const landscapes = [
-  { src: "https://picsum.photos/seed/l1/1200/800", title: "Ridgeline", ratio: "aspect-[3/2]", tag: "Landscape" },
-  { src: "https://picsum.photos/seed/l2/1200/900", title: "Valley Fog", ratio: "aspect-[4/3]", tag: "Landscape" },
-  { src: "https://picsum.photos/seed/l3/1200/1600", title: "Pine Rise", ratio: "aspect-[3/4]", tag: "Landscape" },
-  { src: "https://picsum.photos/seed/l4/1200/800", title: "Sun Trail", ratio: "aspect-[16/9]", tag: "Landscape" },
-];
+// ...landscapes array removed, not used...
 
 
 export default function Page() {

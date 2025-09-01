@@ -37,7 +37,7 @@ export default function SocialLinks() {
       />
       <h2 className="relative z-10 text-4xl font-extrabold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-[#CBA135] via-[#E5C67A] to-[#fff] drop-shadow-lg">Connect & Create</h2>
       <div className="relative z-10 grid grid-cols-1 sm:grid-cols-3 gap-8">
-        {socials.map((s, i) => (
+  {socials.map((s) => (
           <motion.a
             key={s.name}
             href={s.url}

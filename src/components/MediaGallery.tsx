@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export type MediaItem = {
   id: string;
@@ -45,13 +46,15 @@ export default function MediaGallery() {
             className="relative rounded-2xl overflow-hidden shadow-lg cursor-pointer group bg-neutral-900 dark:bg-neutral-100"
             onClick={() => setSelected(item)}
           >
-            <img
+            <Image
               src={item.thumbnail}
-              alt={item.title}
+              alt={item.title || ""}
+              width={300}
+              height={200}
               className="w-full h-48 object-cover group-hover:opacity-80 transition duration-300"
             />
             <div className="absolute top-2 right-2 bg-white/80 rounded-full p-2">
-              <img src="/drive-icon.svg" alt="Google Drive" className="w-6 h-6" />
+              <Image src="/drive-icon.svg" alt="Google Drive" width={24} height={24} className="w-6 h-6" />
             </div>
             <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/70 to-transparent text-white dark:text-black">
               <span className="font-semibold">{item.title}</span>
@@ -70,7 +73,7 @@ export default function MediaGallery() {
             onClick={(e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()}
           >
             {selected.type === "image" ? (
-              <img src={selected.url} alt={selected.title} className="w-full rounded-xl" />
+              <Image src={selected.url} alt={selected.title || ""} width={600} height={400} className="w-full rounded-xl" />
             ) : (
               <video src={selected.url} controls autoPlay className="w-full rounded-xl" />
             )}

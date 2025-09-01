@@ -3,6 +3,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import ThemeToggle from "../components/ThemeToggle";
+import Link from "next/link";
 import MusicEmbed from "../components/MusicEmbed";
 import { ThemeScript } from "./theme-script";
 import "./globals.css";
@@ -45,7 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-950 text-white dark:bg-white dark:text-neutral-900 transition-colors duration-300 snap-y snap-mandatory overflow-y-scroll`}>
         <header className="sticky top-0 z-50 backdrop-blur border-b border-gray-200/60 dark:border-gray-800/60">
           <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-            <a href="/" className="font-semibold">avnsh.club</a>
+            <Link href="/" className="font-semibold">avnsh.club</Link>
             <nav className="flex items-center gap-3">
               <a className="opacity-80 hover:opacity-100" href="#work">Work</a>
               <a className="opacity-80 hover:opacity-100" href="#contact">Contact</a>
